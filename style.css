@@ -13,7 +13,6 @@ html{
     font-size: 62.5%;
     scroll-behavior: smooth;
     font-family: "Roboto", serif;
-    /* font-family: "Italianno", serif;  */
 }
 body{
     background-color: #fff;
@@ -24,6 +23,36 @@ body{
 }
 .tex-justify{
     text-align: justify;
+}
+.text-white{
+    color: white;
+}
+.section-heading{
+    font-size: 8rem;
+    text-align: center;
+    font-family: "Italianno", serif; 
+}
+
+.section-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.btn{
+    background-color: rgb(230, 159, 8);
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem #222;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 2s;
+    font-weight:700;
+    letter-spacing: 0.1rem;
+}
+.btn:hover{
+    transform: scale(1.1);
+
 }
 /* Common Code End heade */
 
@@ -106,26 +135,81 @@ nav li:hover{
 }
 /* Banner Section Ends Here  */
 
+/* Blog about start here  */
+#about{
+    min-height: 95vh;
+    padding: 5rem 1rem;
+    background-color: #4c4c4c;
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-radius: 0.6rem;
+    background-color: #a09d9d;
+    padding: 3rem 1rem;
+    margin: 2rem;
+    transition: transform 0.5s;
+    width: 80%;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card-header{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family:"" sans-serif;
+}
+
+.card-disc{
+    padding: 0.4rem 0;
+    text-align: justify;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.card-btn{
+    align-self: center;
+    width: 80%;
+}
+/* Blog about Ends here  */
+
 
 /* Responsive area start here  */
 @media (max-width: 992px) {
+
     #blog-bannar-section{
         flex-direction: column;
     }
     #blog-bannar-section article{
         flex-basis:50%;
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-bottom: 5rem;
+        flex-wrap: wrap;
     }
 
     body{
-        background-color: #c4c4c4;
+        background-color: #56a385;
         width: 90%;
     }
 
+    .card-container{
+        width:auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5rem;
+
+    }
 }
+
+
+
 @media (max-width: 768px) {
     html{
         font-size: 55.5%;
@@ -142,6 +226,10 @@ nav li:hover{
     }
     #blog-bannar-section article{
         width:90%;
+    }
+
+    .card-container{
+        width:80%;
     }
 
 
@@ -173,6 +261,13 @@ nav li:hover{
     }
     #blog-bannar-section article{
         width:90%;
+    }
+    .banner-immage{
+        max-width: 100%;
+    }
+
+    .card-container{
+        width:100%;
     }
 
 
